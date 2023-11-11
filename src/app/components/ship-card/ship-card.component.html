@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-6">
+    <img src="https://starwars-visualguide.com/assets/img/starships/{{this.index}}.jpg" alt="ship image">
+      <!-- TODO Mostrar imatge de la nau -->
+  </div>
+  <div class="col-6 border">
+    <h1>{{ ship.name }}</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias incidunt eum amet voluptatem cupiditate labore nobis mollitia aliquam sint fugiat tempore sequi hic accusamus dicta, ad obcaecati laudantium voluptate vel similique facere quam! Dolor nam voluptatem iure reprehenderit a facere voluptates, nulla asperiores doloremque commodi! Saepe rerum quae quidem?</p>
+    <hr />
+    <div class="row">
+      <div class="col-6">
+        <p>url: {{ship.url}}</p>
+        <p>MGLT: {{ship.MGLT}}</p>
+        <p>cost:{{ship.cost_in_credits}} credits</p>
+      </div>
+      <div class="col-6">
+        <p>manufacturer: {{ship.manufacturer}}</p>
+        <p>length: {{ship.length}}</p>
+        <p>crew: {{ship.crew}}</p>
+      </div>
+    </div>
+    <button (click)="returnToStarship()" class="btn btn-light">Back</button>
+  </div>
+</div>
