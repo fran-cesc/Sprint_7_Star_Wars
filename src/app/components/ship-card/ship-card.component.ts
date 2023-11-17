@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { StarshipsService } from '../../services/starships.service';
-import { startWith } from 'rxjs';
 import { Starship } from 'src/app/interfaces/starships.interface';
 
 @Component({

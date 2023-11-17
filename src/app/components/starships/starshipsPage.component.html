@@ -1,7 +1,7 @@
 <div class="d-flex flex-column">
   <button type="button"
     class="col-8 text-start mx-auto m-1 bg-dark text-light p-2"
-    *ngFor="let starship of starships; index as i"
+    *ngFor="let starship of starshipList; index as i"
     (click)="showShip(i)"
     >
     <p class="m-1">{{starship.name | uppercase }}</p>
