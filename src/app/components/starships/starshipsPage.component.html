@@ -1,12 +1,20 @@
 <div class="d-flex flex-column">
-  <button type="button"
-    class="col-8 text-start mx-auto m-1 bg-dark text-light p-2"
+  <button
+    type="button"
+    class="col-6 text-start mx-auto m-1 bg-dark text-light p-2"
     *ngFor="let starship of starshipList; index as i"
     (click)="showShip(i)"
-    >
-    <p class="m-1">{{starship.name | uppercase }}</p>
-    <p class="m-1">{{starship.model | titlecase }}</p>
+  >
+    <p class="m-1">{{ starship.name | uppercase }}</p>
+    <p class="m-1">{{ starship.model | titlecase }}</p>
   </button>
-  <button type="button" class="btn btn-light text-center" (click)="loadMoreShips()">Load more ships</button>
-
+  <div class="d-flex justify-content-center">
+    <button
+      type="button"
+      class="btn btn-light text-center mt-3 col-4"
+      (click)="loadMoreShips()"
+    >
+      Load more ships
+    </button>
+  </div>
 </div>

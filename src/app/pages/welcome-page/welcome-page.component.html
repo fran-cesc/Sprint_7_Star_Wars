@@ -1,5 +1,13 @@
-<p class="text-center">welcome to Star Wars page</p>
-<hr>
+<app-header></app-header>
 <app-navbar></app-navbar>
-<p class="text-center">click button to start</p>
-<button type="button" routerLink="/main-page" class="btn btn-light text-center">Start</button>
+  <div class="bg-image">
+    <div *ngIf="usersService.isLogged()" class="text-center">
+      <button
+        type="button"
+        routerLink="/main"
+        class="col-3 btn btn-outline-info text-center mt-4"
+      >
+        Start
+      </button>
+    </div>
+  </div>

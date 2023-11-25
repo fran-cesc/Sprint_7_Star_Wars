@@ -1,6 +1,4 @@
-<div class="text-center">
-  <img src="../../../assets/img/star-wars-white-logo.jpg" alt="SW logo" />
-</div>
+<app-header></app-header>
 <app-navbar></app-navbar>
 <starships (onChange)="onChangeShip($event)" *ngIf="!showShipCard"></starships>
 <ship-card (onChange)="onChangeShip($event)" *ngIf="showShipCard"></ship-card>

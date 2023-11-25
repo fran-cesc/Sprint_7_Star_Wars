@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  constructor(private router: Router) {}
+  public usersService = inject(UsersService)
+  public router = inject(Router)
 
-  public navigateToStarships() {
-    this.router.navigate(['/main-page']);
   }
-}
+

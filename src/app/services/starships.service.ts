@@ -9,8 +9,6 @@ import { Observable } from 'rxjs';
 export class StarshipsService {
   public showShipCard: boolean = false;
   public shipNum!: number;
-
-  // Aqui enmagatzemarem el llistat de naus
   public currentStarship!: number;
   public currentPage: number = 1;
   public starshipList: Starship[] = [];
@@ -20,25 +18,17 @@ export class StarshipsService {
   constructor(private http: HttpClient) {}
 
   public getStarshipList(): Observable<SwapiResponse> {
-    console.log("arribem al getStarshiplist del servei");
-    console.log("current page: " + this.currentPage);
-    return  this.http
-      .get<SwapiResponse>(
-        this.SWAPIURL2 + this.currentPage
-      );
-
+    return this.http.get<SwapiResponse>(this.SWAPIURL2 + this.currentPage);
   }
 
   public changeWiew() {
     this.showShipCard = !this.showShipCard;
   }
 
-  public loadMoreShips():Observable<SwapiResponse> {
-
+  public loadMoreShips(): Observable<SwapiResponse> {
     if (this.currentPage < Math.ceil(this.shipNum / 10)) {
       this.currentPage++;
       return this.getStarshipList();
-
     }
     this.currentPage = 1;
     return this.getStarshipList();

@@ -15,11 +15,9 @@ export class StarshipsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.starshipService.getStarshipList().subscribe((resp) => {
-      console.log('la subscripció rep un nou valor');
       this.starshipService.starshipList = resp.results;
       this.starshipService.shipNum = resp.count;
       this.starshipList = resp.results;
-      console.log('valor del shipnum servei:' + this.starshipService.shipNum);
     });
   }
 
@@ -32,7 +30,7 @@ export class StarshipsPageComponent implements OnInit {
     this.onChange.emit(this.starshipService.showShipCard); //emetem al comp pare (main-page) el valor boolean per visualitzar el llistat o la ship-card)
   }
 
-  public loadMoreShips(){
+  public loadMoreShips() {
     this.starshipService.loadMoreShips().subscribe((resp) => {
       this.starshipService.starshipList = resp.results;
       this.starshipList = resp.results;

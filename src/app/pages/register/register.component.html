@@ -1,0 +1,40 @@
+<form class="col-5 d-flex flex-column m-auto my-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="m-2 mt-4">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" id="username" class="form-control" formControlName="username"
+    [ngClass]="{
+      'is-valid': form.get('username')!.valid && form.get('username')!.touched,
+      'is-invalid': form.get('username')!.invalid && form.get('username')!.touched
+    }">
+    <div *ngIf="form.get('username')!.invalid && form.get('username')!.touched" class="error-message error">
+      User required
+    </div>
+  </div>
+  <div class="m-2">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" class="form-control" formControlName="email"
+    [ngClass]="{
+      'is-valid': form.get('email')!.valid && form.get('email')!.touched,
+      'is-invalid': (form.get('email')!.invalid && form.get('email')!.touched) || isRegistered
+    }">
+    <div *ngIf="form.get('email')!.invalid && form.get('email')!.touched" class="error-message error">
+      Invalid e-mail
+    </div>
+    <div *ngIf="isRegistered" class="error-message error">Email is already registered</div>
+  </div>
+  <div class="m-2">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" id="password" class="form-control" formControlName="password"
+    [ngClass]="{
+      'is-valid': form.get('password')!.valid && form.get('password')!.touched,
+      'is-invalid': form.get('password')!.invalid && form.get('password')!.touched
+    }">
+    <div *ngIf="form.get('password')!.invalid && form.get('password')!.touched" class="error-message error">
+      Invalid password
+    </div>
+  </div>
+  <div class="m-2 text-center">
+    <button type="submit" class="col-4 btn btn-info m-2 text-center" [disabled]="form.invalid">Register</button>
+    <button type="button" class="col-4 btn btn-info m-2" routerLink="/welcome" >Cancel</button>
+  </div>
+</form>

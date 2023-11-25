@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "email": "pepe@gmail.com",
+      "password": "$2a$10$lldBpCszGnUrAZsXgg0.LOB8RCWfzCxpKvnq2v5gtxWtlEmGTUMk6",
+      "username": "pepe",
+      "id": 1
+    },
+    {
+      "email": "deborah@xn--entraa-0wa.argentina.com",
+      "password": "$2a$10$hV8e.w27u7QOY2.R0FjRQeZ2zdTbX1T4021bdxVV6TouXjgGQ6Cji",
+      "username": "deborah",
+      "id": 2
+    },
+    {
+      "email": "pepe@popo.com",
+      "password": "$2a$10$D5R6VSK9XnQTZM0DA1cRCOhK0ZKshaKlT.nIxpg6BvoGnVg/5Hm9S",
+      "username": "pepe",
+      "id": 3
+    },
+    {
+      "email": "pepe@podpo.com",
+      "password": "$2a$10$j.JJ8GYwJzFX2vBs78lxx.p..rmfezDL9GdjcRJCQGZn3.CG3SD2W",
+      "username": "sdfsfd",
+      "id": 4
+    },
+    {
+      "email": "pepe@posspo.com",
+      "password": "$2a$10$CUobh4MTjQo/az4699l7H.AuPss60B3P/JFq1JkD861gFvgN3AQrC",
+      "username": "sdfsdf",
+      "id": 5
+    },
+    {
+      "email": "toni@gmail.com",
+      "password": "$2a$10$HreLaxHUrMl1YW5iDi/SpeNKck7CJGGk0klCs14TBt13bCUs8Vj6S",
+      "username": "toni",
+      "id": 6
+    },
+    {
+      "email": "sdfsf@sfdsdfsdf",
+      "password": "$2a$10$w/dKNVjkXdcOY68RywKxiOwVTXZW4MmfYbP.bDoG.vn9hWdni/zsK",
+      "username": "sdfsdf",
+      "id": 7
+    },
+    {
+      "email": "pepita@hotmail.com",
+      "password": "$2a$10$MmvxF5B8RLWf3UCgud1VHe40wLQ.oKarSeoy8H29EIvH4wgxYZ2Ka",
+      "username": "pepita",
+      "id": 8
+    }
+  ]
+}

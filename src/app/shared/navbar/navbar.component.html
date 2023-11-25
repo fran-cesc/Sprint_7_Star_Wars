@@ -1,8 +1,7 @@
-<hr>
-<nav class="navbar bg-black text-light d-flex">
-  <div class="container-fluid justify-content-center">
-        <a routerLink="/welcome-page" class="nav-link mx-3" >Welcome</a>
-        <a routerLink="/main-page" class="nav-link mx-3">Starships</a>
+<nav *ngIf="usersService.isLogged()" class="navbar border-bottom d-flex mb-2">
+  <div class="col-6 container-fluid justify-content-around">
+        <a routerLink="/welcome" class="nav-link mx-4 fs-5 fw-bold" >Welcome</a>
+        <a routerLink="/main" class="nav-link mx-4 fs-5 fw-bold">Starships</a>
   </div>
 </nav>
-<hr>
+

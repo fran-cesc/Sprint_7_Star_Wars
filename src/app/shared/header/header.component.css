@@ -1,0 +1,11 @@
+img{
+  width: 15vw;
+}
+
+.nav-item{
+  color: grey;
+}
+
+.nav-item:hover {
+  color: white;
+}
