@@ -47,6 +47,21 @@
       "password": "$2a$10$MmvxF5B8RLWf3UCgud1VHe40wLQ.oKarSeoy8H29EIvH4wgxYZ2Ka",
       "username": "pepita",
       "id": 8
+    },
+    {
+      "email": "starwars@sw.com",
+      "password": "$2a$10$SUF2z/VrePob.ol9Qfjk1.5U8Mz0QXHuPuVleM20i0/WPtGtM203a",
+      "id": 9
+    },
+    {
+      "email": "te@te.com",
+      "password": "$2a$10$4NdPn1aE9VHIY.wDHAoPcuZJnwZAq9fiCbZCxZjrWr1oCF8uVPWw6",
+      "id": 10
+    },
+    {
+      "email": "mc@mc.com",
+      "password": "$2a$10$6VmKBnzTJ.XraUjIy.wlpOf/ctoRt6V9APaGWlcFeztvBK7yCiLyK",
+      "id": 11
     }
   ]
 }

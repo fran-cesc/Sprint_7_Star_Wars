@@ -12,8 +12,10 @@ export class StarshipsService {
   public currentStarship!: number;
   public currentPage: number = 1;
   public starshipList: Starship[] = [];
+  public numShipPages: number = 0;
   public SWAPIURL: string = 'https://swapi.dev/api/starships/?page=';
   public SWAPIURL2: string = 'https://swapi.py4e.com/api/starships/?page=';
+
 
   constructor(private http: HttpClient) {}
 
@@ -26,11 +28,13 @@ export class StarshipsService {
   }
 
   public loadMoreShips(): Observable<SwapiResponse> {
-    if (this.currentPage < Math.ceil(this.shipNum / 10)) {
-      this.currentPage++;
-      return this.getStarshipList();
+    this.numShipPages = Math.ceil(this.shipNum / 10);
+    if (this.currentPage >= this.numShipPages) {
+
     }
-    this.currentPage = 1;
+    this.currentPage++;
     return this.getStarshipList();
+
+    // this.currentPage = 1;
   }
 }

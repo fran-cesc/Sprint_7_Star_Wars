@@ -18,7 +18,7 @@ export class RegisterComponent {
 
   constructor() {
     this.form = new FormGroup({
-      username: new FormControl('', Validators.required),
+      // username: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [
         Validators.required,
@@ -42,7 +42,7 @@ export class RegisterComponent {
       const response = await this.usersService.register(this.form.value);
       this.form.reset();
       alert("User registered");
-      this.router.navigate(['/login']);
+      this.router.navigate(['/main']);
     }
   }
 }

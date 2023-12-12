@@ -10,6 +10,7 @@ import { StarshipsService } from 'src/app/services/starships.service';
 })
 export class StarshipsPageComponent implements OnInit {
   public starshipList: Starship[] = [];
+  public numShipPages: number = 0;
 
   constructor(private starshipService: StarshipsService) {}
 
@@ -18,6 +19,7 @@ export class StarshipsPageComponent implements OnInit {
       this.starshipService.starshipList = resp.results;
       this.starshipService.shipNum = resp.count;
       this.starshipList = resp.results;
+
     });
   }
 
@@ -33,7 +35,7 @@ export class StarshipsPageComponent implements OnInit {
   public loadMoreShips() {
     this.starshipService.loadMoreShips().subscribe((resp) => {
       this.starshipService.starshipList = resp.results;
-      this.starshipList = resp.results;
+      this.starshipList = this.starshipList.concat(resp.results);
     });
   }
 }

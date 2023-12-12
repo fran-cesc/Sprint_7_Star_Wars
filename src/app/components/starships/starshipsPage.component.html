@@ -9,7 +9,7 @@
     <p class="m-1">{{ starship.model | titlecase }}</p>
   </button>
   <div class="d-flex justify-content-center">
-    <button
+    <button *ngIf="(starshipList.length < 37)"
       type="button"
       class="btn btn-light text-center mt-3 col-4"
       (click)="loadMoreShips()"
