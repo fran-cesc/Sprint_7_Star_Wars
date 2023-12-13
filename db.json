@@ -62,6 +62,41 @@
       "email": "mc@mc.com",
       "password": "$2a$10$6VmKBnzTJ.XraUjIy.wlpOf/ctoRt6V9APaGWlcFeztvBK7yCiLyK",
       "id": 11
+    },
+    {
+      "email": "tren@tren.com",
+      "password": "$2a$10$g6FfhuhkOPQkpvinjNI/ce3RoNEqmMAbdJqUyuxDYScbmxBVS4duW",
+      "id": 12
+    },
+    {
+      "email": "tren1@tren.com",
+      "password": "$2a$10$u4f.KhODqKhOyJo8tL/QLOz4kZFspg0jY56axJhhjYXZHnwvZAJdm",
+      "id": 13
+    },
+    {
+      "email": "tren2@tren.com",
+      "password": "$2a$10$JmZ.bwyMgXGMHfomtlcgSOazGUwqUgJaOlQA3.Wet.9S0kIduqeNe",
+      "id": 14
+    },
+    {
+      "email": "tren3@tren.com",
+      "password": "$2a$10$2TIp5Iq0ppVcnAB5l428neOioEdR.HztNBYQHBI8GUeqpQvwGCU76",
+      "id": 15
+    },
+    {
+      "email": "tren4@tren.com",
+      "password": "$2a$10$W.rimXA7iGzn5z3kdekqV.4txIJOKjc5cn0eoewL5gvkLAL1DTwye",
+      "id": 16
+    },
+    {
+      "email": "tren5@tren.com",
+      "password": "$2a$10$YLTELeirL8mAd8cpK9gYYu9KvnZ4E3yKynbSWYHFS9L0N0cjSqGI2",
+      "id": 17
+    },
+    {
+      "email": "tren6@tren.com",
+      "password": "$2a$10$LBv1j/UpGr0lIT0pK/WK..uWo45w.NpiCUZO7KvdeOthdeAdyG93u",
+      "id": 18
     }
   ]
 }

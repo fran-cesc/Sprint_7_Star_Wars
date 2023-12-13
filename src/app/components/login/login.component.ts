@@ -28,6 +28,7 @@ export class LoginComponent {
 
     if (!response.error) {
       localStorage.setItem('token', response.accessToken);
+      this.form.reset();
       this.router.navigate(['/welcome']);
     }
   }
