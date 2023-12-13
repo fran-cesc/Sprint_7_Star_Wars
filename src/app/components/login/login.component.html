@@ -1,13 +1,28 @@
 <form class="d-flex flex-column m-auto" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="m-2 mt-4">
     <label for="email" class="form-label">Email</label>
-    <input type="email" id="email" class="form-control" formControlName="email">
+    <input type="email" id="email" class="form-control" formControlName="email"
+    [ngClass]="{
+      'is-valid': form.get('email')!.valid && form.get('email')!.touched,
+      'is-invalid': (form.get('email')!.invalid && form.get('email')!.touched)
+    }">
+    <div *ngIf="form.get('email')!.invalid && form.get('email')!.touched" class="error-message error">
+      Invalid e-mail
+    </div>
   </div>
   <div class="m-2">
     <label for="password" class="form-label">Password</label>
-    <input type="password" id="password" class="form-control" formControlName="password">
+    <input type="password" id="password" class="form-control" formControlName="password"
+    [ngClass]="{
+      'is-valid': form.get('password')!.valid && form.get('password')!.touched,
+      'is-invalid': form.get('password')!.invalid && form.get('password')!.touched
+    }">
+    <div *ngIf="form.get('password')!.invalid && form.get('password')!.touched" class="error-message error">
+      Invalid password
+    </div>
   </div>
   <div class="m-2 text-center">
-    <button type="submit" class="col-4 btn btn-info m-2">Login</button>
+    <button type="submit" class="col-4 btn btn-info m-2"
+    [disabled]="form.invalid">Login</button>
   </div>
 </form>

@@ -8,13 +8,13 @@
     <ul class="col-3 d-flex d-flex justify-content-between text-light
       text-decoration-none list-unstyled mt-3">
     <li *ngIf="!usersService.isLogged()">
-      <a class="text-decoration-none nav-item" data-bs-toggle="modal"
-        data-bs-target="#registerModal" routerLink="">
+      <a class="text-decoration-none nav-item" id="register" routerLink=""
+      (click)="open($event)">
         Register</a>
     </li>
     <li *ngIf="!usersService.isLogged()">
-      <a class="text-decoration-none nav-item" data-bs-toggle="modal"
-      data-bs-target="#loginModal" routerLink="">
+      <a class="text-decoration-none nav-item" id="login" routerLink=""
+      (click)="open($event)">
       Login</a>
     </li>
     <li *ngIf="usersService.isLogged()" >
@@ -26,32 +26,6 @@
 
 
 <!-- Register Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <app-register></app-register>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <app-login></app-login>
-      </div>
-    </div>
-  </div>
-</div>

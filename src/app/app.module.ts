@@ -14,6 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ShipCardComponent } from './components/ship-card/ship-card.component';
 import { StarshipsPageComponent } from './components/starships/starshipsPage.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
