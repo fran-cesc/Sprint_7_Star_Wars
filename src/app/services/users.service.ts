@@ -14,7 +14,7 @@ export class UsersService {
     this.baseUrl = 'http://localhost:3000';
   }
 
-  register(formValue: User) {
+  register(formValue: User){
     return firstValueFrom(
       this.HttpClient.post<User>(`${this.baseUrl}/register`, formValue)
     );

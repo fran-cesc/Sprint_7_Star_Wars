@@ -30,11 +30,9 @@ export class StarshipsService {
   public loadMoreShips(): Observable<SwapiResponse> {
     this.numShipPages = Math.ceil(this.shipNum / 10);
     if (this.currentPage >= this.numShipPages) {
-
+      this.currentPage++;
     }
-    this.currentPage++;
     return this.getStarshipList();
 
-    // this.currentPage = 1;
   }
 }

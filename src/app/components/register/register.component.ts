@@ -10,13 +10,13 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
-  activeModal = inject(NgbActiveModal);
 
   form: FormGroup;
+  activeModal = inject(NgbActiveModal);
+  usersService = inject(UsersService);
+  router = inject(Router);
   isRegistered: boolean = false;
 
-  router = inject(Router);
-  usersService = inject(UsersService);
 
   constructor() {
     this.form = new FormGroup({
