@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { StarshipsService } from '../../services/starships.service';
 import { Starship } from 'src/app/interfaces/starships.interface';
 
@@ -7,17 +7,37 @@ import { Starship } from 'src/app/interfaces/starships.interface';
   templateUrl: './ship-card.component.html',
   styleUrls: ['./ship-card.component.css'],
 })
-export class ShipCardComponent {
-  public index: number = this.StarshipsService.currentStarship;
-  public ship: Starship = this.StarshipsService.starshipList[this.index];
+export class ShipCardComponent{
+  public index: number = 0;
+  public shipUrl: string = "";
+  public shipNumber: number | null = 0;
+  public ship?: Starship | null;
+
 
   @Output()
   public onChange: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private StarshipsService: StarshipsService) {}
+  constructor(private starshipsService: StarshipsService) {
+    this.starshipsService.getStarshipList().subscribe( (resp) => {
+      this.index = this.starshipsService.currentStarship;
+      this.shipUrl = resp.results[this.index].url;
+      this.ship = resp.results[this.index];
+      this.shipNumber = this.extractShipNumberFromURL(this.shipUrl);
+
+    })
+  }
 
   public returnToStarship() {
-    this.StarshipsService.changeWiew();
-    this.onChange.emit(this.StarshipsService.showShipCard);
+    this.starshipsService.changeWiew();
+    this.onChange.emit(this.starshipsService.showShipCard);
   }
+
+  public extractShipNumberFromURL(url: string): number | null {
+    const regex = /\/(\d+)\/$/;
+    const match = url.match(regex);
+    if (match && match[1]) {
+        return parseInt(match[1], 10);
+    }
+    return null;  // Retorna null si no encuentra un número en la URL
+}
 }

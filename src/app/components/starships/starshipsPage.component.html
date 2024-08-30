@@ -2,17 +2,17 @@
   <button
     type="button"
     class="col-6 text-start mx-auto m-1 bg-dark text-light p-2"
-    *ngFor="let starship of starshipList; index as i"
+    *ngFor="let starship of displayedStarships; index as i"
     (click)="showShip(i)"
   >
     <p class="m-1">{{ starship.name | uppercase }}</p>
     <p class="m-1">{{ starship.model | titlecase }}</p>
   </button>
   <div class="d-flex justify-content-center">
-    <button *ngIf="(starshipList.length < 37)"
+    <button
       type="button"
       class="btn btn-light text-center mt-3 col-4"
-      (click)="loadMoreShips()"
+      (click)="loadMoreShips(numShipPages)"
     >
       Load more ships
     </button>

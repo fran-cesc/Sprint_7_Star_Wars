@@ -1,23 +1,23 @@
 <div class="ship-card-container">
   <div class="ship-image">
-    <img src="https://starwars-visualguide.com/assets/img/starships/{{this.index}}.jpg"
+    <img src="https://starwars-visualguide.com/assets/img/starships/{{this.shipNumber}}.jpg"
     onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
     alt="ship image" class="h-20">
   </div>
   <div class="ship-details">
-      <h1>{{ ship.name }}</h1>
+      <h1>{{ ship?.name }}</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <hr/>
       <div class="row">
         <div class="col-4">
-          <p>Model: {{ship.model}}</p>
-          <p>MGLT: {{ship.MGLT}}</p>
-          <p>cost:{{ship.cost_in_credits}} credits</p>
+          <p>Model: {{ship?.model}}</p>
+          <p>MGLT: {{ship?.MGLT}}</p>
+          <p>cost:{{ship?.cost_in_credits}} credits</p>
         </div>
         <div class="col-4">
-          <p>length: {{ship.length}}</p>
-          <p>crew: {{ship.crew}}</p>
-          <p>manufacturer: {{ship.manufacturer}}</p>
+          <p>length: {{ship?.length}}</p>
+          <p>crew: {{ship?.crew}}</p>
+          <p>manufacturer: {{ship?.manufacturer}}</p>
         </div>
       </div>
       <button (click)="returnToStarship()" class="btn btn-light">Back</button>

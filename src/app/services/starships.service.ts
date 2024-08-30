@@ -10,7 +10,7 @@ export class StarshipsService {
   public showShipCard: boolean = false;
   public shipNum!: number;
   public currentStarship!: number;
-  public currentPage: number = 1;
+  public currentPage: number = 0;
   public starshipList: Starship[] = [];
   public numShipPages: number = 0;
   public SWAPIURL: string = 'https://swapi.dev/api/starships/?page=';
@@ -28,10 +28,15 @@ export class StarshipsService {
   }
 
   public loadMoreShips(): Observable<SwapiResponse> {
+    console.log("currentPage: ", this.currentPage);
+    console.log("shipnum: ", this.shipNum);
     this.numShipPages = Math.ceil(this.shipNum / 10);
-    if (this.currentPage >= this.numShipPages) {
+    if (this.currentPage <= this.numShipPages) {
       this.currentPage++;
+    } else {
+      this.currentPage = 0;
     }
+
     return this.getStarshipList();
 
   }
