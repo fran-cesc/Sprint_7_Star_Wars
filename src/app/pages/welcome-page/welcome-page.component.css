@@ -1,7 +1,8 @@
 
 .bg-image{
-  width: 100%;
+  margin: auto;
+  width: 80%;
   height: 65vh;
-  background-image: url(../../../assets/img/star-wars-jedi-3pr19v0rbzzvhgk2.jpg);
+  background-image: url(../../../assets/img/agnieszka-stankiewicz-GnLAk7IvGM4-unsplash.jpg);
   background-size: 100% 100%;
 }

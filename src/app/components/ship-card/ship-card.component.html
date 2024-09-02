@@ -1,25 +1,30 @@
-<div class="ship-card-container">
-  <div class="ship-image">
-    <img src="https://starwars-visualguide.com/assets/img/starships/{{this.shipNumber}}.jpg"
-    onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
-    alt="ship image" class="h-20">
+<div class="container mt-4">
+  <div class="row">
+    <h1 class="border-bottom col-12">STARSHIP</h1>
   </div>
-  <div class="ship-details">
-      <h1>{{ ship?.name }}</h1>
-      <p>{{ ship?.model}}</p>
-      <hr/>
-      <div class="row">
-        <div class="col-4">
-          <p>Model: {{ship?.model}}</p>
-          <p>MGLT: {{ship?.MGLT}}</p>
-          <p>cost:{{ship?.cost_in_credits}} credits</p>
-        </div>
-        <div class="col-4">
-          <p>length: {{ship?.length}} m</p>
-          <p>crew: {{ship?.crew}}</p>
-          <p>capacity: {{ship?.cargo_capacity}} tn</p>
-        </div>
-      </div>
-      <button (click)="returnToStarship()" class="btn btn-light">Back</button>
+  <hr>
+  <div class="row gap-0">
+    <div class="col-6">
+      <img src="https://starwars-visualguide.com/assets/img/starships/{{this.shipNumber}}.jpg" alt="Image of {{ ship?.name}}"
+      onerror="this.src='https://starwars-visualguide.com/assets/img/big-placeholder.jpg'"
+      alt="ship image" class="img-fluid">
+    </div>
+
+    <div class="col-6 cardCustom m">
+        <h1>{{ ship?.name }}</h1>
+        <p>{{ ship?.model}}</p>
+        <hr/>
+          <div class="">
+            <p>cost: {{ship?.cost_in_credits}} credits</p>
+            <p>length: {{ship?.length}} m</p>
+            <p>crew: {{ship?.crew}}</p>
+            <p>capacity: {{ship?.cargo_capacity}} tn</p>
+          </div>
+    </div>
+  </div>
+  <div class="col-6 mx-auto mt-3 text-center">
+    <button (click)="returnToStarship()" class="btn btn-light col-6">Back</button>
   </div>
 </div>
+
+

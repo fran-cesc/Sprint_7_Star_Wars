@@ -1,4 +1,4 @@
-.ship-card-container{
+/* .ship-card-container{
   position: relative;
   width: 100%;
 }
@@ -13,6 +13,16 @@
   position: absolute;
   top: 5%;
   left: 5%;
+} */
+
+/* .img-custom{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.cardCustom{
+  background-color: #1d1b1b;
 }
 
 p, h1{

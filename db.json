@@ -290,6 +290,12 @@
       "email": "tisora@tisora.com",
       "password": "$2a$10$TaDIv//VKwoZvQs57gvJCO3Udr.RaJ7BZr83pz1leYRfBxmIeGNiG",
       "id": 52
+    },
+    {
+      "email": "fran@fran.com",
+      "password": "$2a$10$q/M8og7hjnIQcNme70BBsuCmYO0c/R6YUdMm4SFchF9523XrLnzzG",
+      "fullName": "fran",
+      "id": 53
     }
   ]
 }
