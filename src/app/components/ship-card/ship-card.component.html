@@ -6,7 +6,7 @@
   </div>
   <div class="ship-details">
       <h1>{{ ship?.name }}</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p>{{ ship?.model}}</p>
       <hr/>
       <div class="row">
         <div class="col-4">
@@ -15,9 +15,9 @@
           <p>cost:{{ship?.cost_in_credits}} credits</p>
         </div>
         <div class="col-4">
-          <p>length: {{ship?.length}}</p>
+          <p>length: {{ship?.length}} m</p>
           <p>crew: {{ship?.crew}}</p>
-          <p>manufacturer: {{ship?.manufacturer}}</p>
+          <p>capacity: {{ship?.cargo_capacity}} tn</p>
         </div>
       </div>
       <button (click)="returnToStarship()" class="btn btn-light">Back</button>
